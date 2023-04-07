@@ -1,0 +1,40 @@
+<table class="table">
+  <tbody>
+    <tr>
+      <td>Размеры (ДхГхВ)</td>
+      <td>{{ product.size }}</td>
+    </tr>
+    <tr>
+      <td>Наличие спального места</td>
+      {% if  product.bed  == True %}
+          <td>Да</td>}}
+      {% endif %}
+    </tr>
+    <tr>
+      <td>Размеры спального места(ДхГ)</td>
+      <td>{{ product.bed_size }}</td>
+    </tr>
+    <tr>
+      <td>Материал каркаса</td>
+      <td>{{ product.frame_material }}</td>
+    </tr>
+    <tr>
+      <td>Наполнение спального (посадочного) места</td>
+      <td>{{ product.filling_the_bed }}</td>
+    </tr>
+    <tr>
+      <td>Материал опор</td>
+      <td>{{ product.support_material }}</td>
+    </tr>
+    <tr>
+      <td>Материал обивки</td>
+      <td>{{ product.upholstery_material }}</td>
+    </tr>
+    <tr>
+      <td>Механизм трансформации</td>
+      <td>{{ product.transformation_mechanism }}</td>
+    </tr>
+  </tbody>
+</table>
+
+

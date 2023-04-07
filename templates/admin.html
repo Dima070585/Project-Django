@@ -1,0 +1,21 @@
+{% extends 'admin/change_form.html' %}
+{% load static %}
+
+{% block admin_change_form_document_ready %}
+{{ block.super }}
+<script>
+    (function($){
+        $('#id_bed').on('click',function () {
+            if($('#id_bed').prop('checked') == true){
+                $('#id_bed_size').prop('readonly', false)
+                $('#id_bed_size').val('')
+                $('#id_bed_size').css('background', 'white')
+            }else {
+                $('#id_bed_size').prop('readonly', true)
+                $('#id_bed_size').val('&#8212;')
+                $('#id_bed_size').css('background', 'lightgray')
+            }
+        })
+    })(django.jQuery);
+</script>
+{% endblock %}
